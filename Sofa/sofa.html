@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofa & Recliners</title>
+    <link rel="stylesheet" href="/styles/sofa.css">   
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="icon" type="image/x-icon" href="https://media.glassdoor.com/sqll/14907/overstock-com-squarelogo-1529535998697.png">
+   
+   
+    
+</head>
+<body>
+    <div id="nav"></div>
+    <div id="container"></div>
+    <div id="top">
+        <div id="topLeft">
+            <h1>Sofas & Couches</h1>
+            <p>Sofa</p>
+            <p>Sectional</p>
+            <p>Loveseats</p>
+            <p>Sleeper Sofas</p>
+            <p>Leather Sofas</p>
+            <p>Recliner Sofas</p>
+            <p id="bookmark">🔖 Shops all Sofas & Couches on Sale</p>
+        </div>
+        <div id="background"></div>
+     </div>
+     <div id="second">
+        <h2>Shop by Type</h2>
+        <div id="byType"></div>
+    </div>
+    <div id="third">
+        <h2>Shop by Style</h2>
+        <div id="byStyle"></div>
+    </div>
+
+    <div id="sort">
+        <h3>Sort By :</h3>
+        <select id="sortBy" onclick="sortby()" >
+            <option value="By Selling" >By Selling</option>
+            <option value="lth" >Price Low-High</option>
+            <option value="htl" >Price High-Low</option>
+            <option value="rating" >Rating</option>
+        </select>
+    </div>
+
+    <div id="last">
+        <div id="lastLeft">
+            <select>
+                <option>Type</option>
+                <option>Sofa</option>
+                <option value="">Sleeper sofa</option>
+                <option value="">Recliner</option>
+                <option value="">Sets</option>
+                <option value="">Settee</option>
+            </select>
+            <br>
+            <select name="" id="filterPrice" onchange="filter()">
+                <option value="">Price</option>
+                <option value="220000">Less Then 220000</option>
+                <option value="80000">Less Then 180000</option>
+                <option value="60000">Less Then 60000</option>
+                <option value="20000">Less Then 20000</option>
+                
+               
+              
+             </select>
+             <br>
+            <select name="" id="">
+                <option value="">Colors</option>
+                <option value="">Grey</option>
+                <option value="">Brown</option>
+                <option value="">Blue</option>
+                <option value="">White</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Upholstery Materials</option>
+                <option value="">Leather</option>
+                <option value="">Velvet</option>
+                <option value="">Polyester</option>
+                <option value="">Cotton</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Styles</option>
+                <option value="">Modern</option>
+                <option value="">Traditional</option>
+                <option value="">Farmhouse</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Arm Styles</option>
+                <option value="">Rolled Arm</option>
+                <option value="">Square Arm</option>
+                <option value="">ROund Arm</option>
+                <option value="">Flared Arm</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Back Styles</option>
+                <option value="">Tufted Back</option>
+                <option value="">Cushion Back</option>
+                <option value="">Pillow Back</option>
+                <option value="">Tight Back</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Bands</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Prints</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Assembly</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Sales & Promotions</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Product Features</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Customer Ratings</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Availability</option>
+            </select>
+        </div>
+        <div id="lastRight"></div>
+    </div>
+    <div id="footer"></div>
+    
+</body>
+</html>
+<script>
+
+
+
+
+
+
+let data=JSON.parse(localStorage.getItem("furniture"))
+
+let main=data;
+
+
+
+let container=document.getElementById("lastRight")
+
+
+const appenddata=(main)=>{
+
+    container.innerHTML=null;
+
+        main.forEach((e)=>{
+
+            let innerdiv=document.createElement("div");
+            innerdiv.setAttribute("id", "bottominner")
+        
+            let img=document.createElement("img")
+            img.src=e.imgSrc;
+
+            let forprice=document.createElement("div");
+            forprice.setAttribute("id", "forprice")
+
+            let Price=document.createElement("h2")
+            Price.innerText="Starting at INR"+" "+e.price;
+
+            let rating=document.createElement("h4")
+            rating.innerText=e.rating;
+
+            let name=document.createElement("p")
+            name.innerText=e.name;
+
+            forprice.append(Price,rating,name)
+
+            innerdiv.append(img,forprice)
+            
+            container.append(innerdiv)
+
+             innerdiv.addEventListener("click",()=>{
+               
+               
+
+                localStorage.setItem("product",JSON.stringify(e))
+
+                window.location.href="/rohit/product_page.html"
+
+                
+            })
+
+
+
+        })
+}
+
+
+appenddata(main);
+
+
+
+let secondData=[
+    {
+        "name" : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
+        "category" : "Sofa",
+        "price" : "41500",
+        "rating": "4",
+        "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_Sofas&Couches.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "Rosevera Bjorn Chesterfield Settee",
+        "category" : "Sleeper Sofa",
+        "price" : "31000",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/06132019_SP057_BMOD1-2.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "Morden Style Sofa Set Couch Furniture Upholstered Armchair, Loveseat and Three Seat Sofa for Home or Office (1+2+3-Seat)",
+        "category" : "Recliner Sofa",
+        "price" : "288099",
+        "rating": "4",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/23463782/ProLounger-Dark-Grey-Tufted-Velvet-3-Seat-Recliner-Loveseat-n-a-9638d0eb-0d2a-40b6-af1f-ec3cc7c320c2.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Sofa Sets",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/26275463/McCallister-Oatmeal-Tweed-Fabric-Seating-by-iNSPIRE-Q-Artisan-c0ddd0e0-f7db-4df0-a305-0c6c86886fcc.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Sectionals",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/22057532/Matilda-Mid-Century-Fabric-Chaise-Sectional-Sofa-by-Christopher-Knight-Home-55b83a6e-471f-472e-a416-e229e72fa7d2.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Loveseats",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/25860917/Fenn-Square-Arm-Living-Room-Seating-by-iNSPIRE-Q-Modern-8e849781-c470-4cf1-883f-456f187dda91.jpg?imWidth=320&impolicy=medium"
+    },
+]
+
+localStorage.setItem("secondData",JSON.stringify(secondData)) ;
+
+let secData=JSON.parse(localStorage.getItem("secondData")) 
+
+let byType=document.getElementById("byType")
+
+let bySype=document.getElementById("bySype")
+
+const secondShow=(data)=>{
+
+    data.forEach((e)=>{
+
+        let div=document.createElement("div")
+        div.setAttribute("id","secDivInner")
+
+        let img=document.createElement("img")
+        img.src=e.imgSrc;
+
+        let name=document.createElement("p")
+        name.innerText=e.category;
+
+        div.append(img,name)
+
+        byType.append(div)
+    })
+
+}
+
+secondShow(secData)
+
+
+//for third data
+
+let thirdData=[
+    {
+        "name" : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
+        "category" : "Modern & COntemporary Sofas",
+        "price" : "41500",
+        "rating": "4",
+        "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_ModernSofa.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "Rosevera Bjorn Chesterfield Settee",
+        "category" : "Glam Sofa",
+        "price" : "31000",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/26411394/Glam-Royal-Blue-Velvet-Fabric-Upholstered-Sofa-a045645c-4aa6-4d9e-93c1-3af61c558765.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "Morden Style Sofa Set Couch Furniture Upholstered Armchair, Loveseat and Three Seat Sofa for Home or Office (1+2+3-Seat)",
+        "category" : "Transitional Sofa",
+        "price" : "288099",
+        "rating": "4",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/3911915/Uptown-Modern-Sofa-by-iNSPIRE-Q-Classic-c4f96a87-5699-44e1-9370-8e5cbeb7d384_600.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Mid-Century Modern Sofa",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_Mid-CenturySofas.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Leather Sofa",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/22799314/Abbyson-Woodstock-Camel-Mid-Century-Top-Grain-Leather-Sofa-5b30abad-ff1b-4430-89ef-8f867bd7abea.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Velvet Sofa",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/19755850/Corvus-Prato-Velvet-Chesterfield-Sofa-with-Rolled-Arms-f30b8e2d-5902-4c39-a327-1542eac410ab.jpg?imWidth=320&impolicy=medium"
+    },
+]
+
+
+const thirdShow=(data)=>{
+
+data.forEach((e)=>{
+
+    let div=document.createElement("div")
+    div.setAttribute("id","secDivInner")
+
+    let img=document.createElement("img")
+    img.src=e.imgSrc;
+
+    let name=document.createElement("p")
+    name.innerText=e.category;
+
+    div.append(img,name)
+
+    byStyle.append(div)
+})
+
+}
+
+thirdShow(thirdData)
+    
+
+    function sortby()
+    {
+        let sorting=document.querySelector("#sortBy").value
+
+        if(sorting==="htl")
+        {
+            
+            main.sort((a,b)=>{
+                return b.price-a.price
+            })
+
+            console.log(main)
+            appenddata(main);
+            
+        }
+      if(sorting==="lth")
+        {
+            main.sort((a,b)=>{
+                return a.price-b.price
+            })
+            console.log(main)
+            appenddata(main);
+        }
+    //    if(sorting==="rating")
+    //     {
+    //         main.sort((a,b)=>{
+    //           return a.rating-b.rating;
+    //         })
+    //         console.log(main)
+
+    //         appenddata(main)
+    //     }
+    }
+
+
+
+
+    //price filter 
+
+    function filter()
+    {
+        let num=document.getElementById("filterPrice").value;
+
+        let filterData=main.filter((e)=>{
+
+            
+            return e.price<Number(num);
+        })
+
+        appenddata(filterData)
+        
+    }
+
+
+
+
+
+</script>
+
+
+<script type="module">
+
+    import footer from "/components/footer.js"
+
+    document.getElementById("footer").innerHTML=footer();
+
+    import {navbarzone} from "/components/navbar.js"
+
+document.getElementById("nav").innerHTML=navbarzone();
+</script>
+
+

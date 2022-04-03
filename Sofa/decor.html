@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decor</title>
+    <link rel="stylesheet" href="/styles/sofa.css">   
+    <link rel="stylesheet" href="/styles/footer.css">
+    <!-- <link rel="stylesheet" href="/styles/homepage.css"> -->
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="icon" type="image/x-icon" href="https://media.glassdoor.com/sqll/14907/overstock-com-squarelogo-1529535998697.png">
+    
+
+    
+</head>
+<body>
+    <div id="nav"></div>
+    <div id="container"></div>
+    <div id="top">
+        <div id="topLeft">
+            <h1>Wrapped Canvas</h1>
+            <p>Oversized Canvas Art</p>
+            <p>Large Canvas Art</p>
+            <p>Medium Canvas Art</p>
+            <p>Abstract Canvas Art</p>
+            <p>Landscape Canvas Art</p>
+            <p>Floral Canvas Art</p>
+            
+            <p id="bookmark">🔖 Shops all Gallery Wrapped Canvas on Sale</p>
+        </div>
+        <div id="backgroundDecor"></div>
+     </div>
+     <div id="second">
+        <h2>Popular Sizes & Sets</h2>
+        <div id="bypopular"></div>
+    </div>
+    <div id="sort">
+        <h3>Sort By :</h3>
+        <select id="sortBy" onclick="sortby()" >
+            <option value="By Selling" >By Selling</option>
+            <option value="lth" >Price Low-High</option>
+            <option value="htl" >Price High-Low</option>
+            <option value="rating" >Rating</option>
+        </select>
+    </div>
+
+    <div id="last">
+        <div id="lastLeft">
+            <select>
+                <option> Size</option>
+               
+            </select>
+            <br>
+            <select name="" id="filterPrice" onchange="filter()">
+                <option value="">Price</option>
+                <option value="280000">180000-220000</option>
+                <option value="80001">80000-180000</option>
+                <option value="40001">60000-80000</option>
+                <option value="20000">20000-60000</option>
+            </select>
+             <br>
+            <select name="" id="">
+                <option value="">Subject</option>
+               
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Number of Pieces </option>
+               
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Styles</option>
+               
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Shapes</option>
+              
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Brands</option>
+                
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Orientation</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Prints</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Assembly</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Sales & Promotions</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Product Features</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Customer Ratings</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Availability</option>
+            </select>
+        </div>
+        <div id="lastRight"></div>
+    </div>
+    <div id="footer"></div>
+    
+</body>
+</html>
+<script>
+
+
+let data=JSON.parse(localStorage.getItem("decor"))
+
+let main=data;
+
+let container=document.getElementById("lastRight")
+
+
+const appenddata=(main)=>{
+
+    container.innerHTML=null;
+
+        main.forEach((e)=>{
+
+            let innerdiv=document.createElement("div");
+            innerdiv.setAttribute("id", "bottominner")
+        
+            let img=document.createElement("img")
+            img.src=e.imgSrc;
+
+            let forprice=document.createElement("div");
+            forprice.setAttribute("id", "forprice")
+
+            let Price=document.createElement("h2")
+            Price.innerText="Starting at INR"+" "+e.price;
+
+            let rating=document.createElement("h4")
+            rating.innerText=e.rating;
+
+            let name=document.createElement("p")
+            name.innerText=e.name;
+
+            forprice.append(Price,rating,name)
+
+            innerdiv.append(img,forprice)
+            
+            container.append(innerdiv)
+
+             innerdiv.addEventListener("click",()=>{
+               
+                // let dataarray=[];
+
+                // dataarray.push(e);
+
+                localStorage.setItem("product",JSON.stringify(e))
+                window.location.href="/rohit/product_page.html"
+
+                
+            })
+
+
+
+        })
+}
+
+
+appenddata(main);
+
+let array=[];
+
+
+
+let secondDecorData=[
+//  {
+//     "name" : "Wrapped Canvas",
+//     "rating" : "",
+//     "price" : "",
+//     "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/04292019_WrappedCanvas_A1.jpg?imwidth=1200&impolicy=custom"
+// },
+{
+    "name" : "Oversized Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/112119-SP-WrappedCanvas-BMOD-1.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "Large Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/25628670/Madison-Park-Twilight-Mystere-Blush-Grey-100-Percent-Hand-Brush-Embellished-Canvas-3-Piece-Set-blush-grey-04d73003-e2c6-48fd-8278-bfa33da63873_320.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "Medium Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/25705398/Designart-Indigo-Panel-I-Glam-Modern-Premium-Canvas-Wall-Art-Blue-67bbcfdc-32ad-4dbc-954f-ac67b4251782_1000.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "Small Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/29762963/Oliver-Gal-Solid-Gold-Navy-Silver-Typography-and-Quotes-Wall-Art-Canvas-Print-Blue-Gray-9ac5528b-ddfd-48c3-a734-68ebf4ccff7f_320.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "1-Piece Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/a7d3ec7d077d74473fec62ba0ef2687d601495c7/Designart-%27Garden-Dreams-Flower%27-Traditional-Gallery-wrapped-Canvas.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "2-Piece Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/8231786/Ready2HangArt-Abstract-Spa-2-piece-Gallery-wrapped-Canvas-Art-Set-133e4967-3be3-44d2-aa4a-f298727a84b7_320.jpg?imWidth=320&impolicy=medium"
+}, 
+]
+
+localStorage.setItem("secondData",JSON.stringify(secondDecorData))
+
+let secData=JSON.parse(localStorage.getItem("secondData"))
+
+let byType=document.getElementById("bypopular")
+
+
+
+const secondShow=(data)=>{
+
+    data.forEach((e)=>{
+
+        let div=document.createElement("div")
+        div.setAttribute("id","decorDivInner")
+
+        let img=document.createElement("img")
+        img.src=e.imgSrc;
+
+        let name=document.createElement("p")
+        name.innerText=e.name;
+
+        div.append(img,name)
+
+        byType.append(div)
+    })
+
+}
+
+secondShow(secData)
+    
+
+    function sortby()
+    {
+        let sorting=document.querySelector("#sortBy").value
+
+        if(sorting==="htl")
+        {
+            
+            main.sort((a,b)=>{
+                return b.price-a.price
+            })
+
+            console.log(main)
+            appenddata(main);
+            
+        }
+      else if(sorting==="lth")
+        {
+            main.sort((a,b)=>{
+                return a.price-b.price
+            })
+            console.log(main)
+            appenddata(main);
+        }
+       
+       
+    }
+
+
+    //price filter 
+
+    function filter()
+    {
+        let num=document.getElementById("filterPrice").value;
+
+        let filterData=main.filter((e)=>{
+
+            
+            return e.price<Number(num);
+        })
+
+        appenddata(filterData)
+        
+    }
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<script type="module">
+
+    import footer from "/components/footer.js"
+
+    document.getElementById("footer").innerHTML=footer();
+
+    import {navbarzone} from "/components/navbar.js"
+
+    document.getElementById("nav").innerHTML=navbarzone();
+</script>

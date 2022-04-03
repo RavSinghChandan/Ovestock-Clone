@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="./styles/signup.css">
+    <link rel="icon" type="image/x-icon" href="https://media.glassdoor.com/sqll/14907/overstock-com-squarelogo-1529535998697.png">
+   
+
+<link rel="stylesheet" href="/styles/navbar.css"></head>
+<body>
+    <div id="nav"></div>
+   <div id="jarvis">
+    <div id="accContainer">
+        <div id="signupBox">
+            <h1>Create Account</h1>
+            <form id="signupForm">
+                <label for="">Email Address*</label> <br>
+                <input type="email" name="email_input" id="email" placeholder="Email">
+                <div class="inside-form-flex-div">
+                    <div>
+                        <label for="">Create Password*</label>
+                        <input type="password" name="pass_input" class="password" placeholder="Password">
+                    </div>
+                    <div>
+                        <label for="">Confirm Password*</label>
+                        <input type="password" name="confirm_pass_input" placeholder="Confirm Password" class="password">
+                    </div>
+                </div>
+                <div class="inside-signup-checkbox">
+                    <input type="checkbox">
+                    <label for="">Sign up today for <strong>exclusive offers</strong> from Overstock.com deliverd right to your inbox**</label>
+                </div>
+                <input type="submit" value="Create Account" class="submit-signup-form">
+                <input type="submit" value="Continue as Guest" class="submit-signup-form">
+            </form>
+            <p>By creating an account or continuing as a Guest, you agree to our <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a>.</p>
+            <p><a href="">Terms & Conditions</a> | <a href="">Privacy Policy</a>. <br> **You can unsubscribe at any time</p>
+        </div>
+        <div class="form-partition-line"></div>
+        <div id="loginBox">
+            <h1>Sign In</h1>
+            <form id="loginForm">
+                <label for="">Email Address*</label> <br>
+                <input type="email" name="email_input" class="login-email-input" placeholder="Email">
+                <label for="">Password*</label>
+                <input type="password" name="pass_input" class="password" placeholder="Password">
+                <input type="submit" value="Sign In" class="submit-login-form">
+                <a href="">Forgot your password?</a>
+            </form>
+        </div>
+    </div>
+    <div id="accountsFooter">
+        <p>Return Policy</p> 
+        <p>Contact Customer Care</p> 
+        <p>FAQ</p>
+        <p>Privacy Policy</p> 
+        <p>Site User Terms & Conditions</p>
+        <p>© 2022 Overstock.com All Rights Reserved</p>
+        <p>We self-certify compliance with:</p>
+        <img src="https://ak1.ostkcdn.com/img/mxc/20200630-intl-privacy_shield.png" alt="">
+    </div>
+   </div>
+</body>
+</html>
+
+<script src="./scripts/signup.js"></script>
+<script type="module">
+     import {navbarzone} from "/components/navbar.js"
+
+document.getElementById("nav").innerHTML=navbarzone();
+</script>

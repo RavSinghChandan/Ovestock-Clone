@@ -1,0 +1,235 @@
+
+#bottom{
+    border: 2px solid black;
+    height: 800px ;
+    display: flex;
+}
+
+#container{
+   margin-top: 50px;
+}
+
+#righttop{
+    background-image: url(//ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?imwidth=900&impolicy=custom);
+    width: 90%;
+    height: 300px;
+    background-repeat: no-repeat;
+   
+}
+
+#bottomleft{
+    width: 500px;
+}
+
+#bottomright{
+    width: 100%;
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+    gap: 0px;
+}
+
+#bottominner{
+    /* border: 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 390px;
+    height: 550px;
+    line-height: 19px;
+
+    
+}
+
+#bottominner>img{
+    width: 100%;
+} 
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#top{
+   display: flex;
+   width: 92%;
+   margin: auto;
+}
+
+#topLeft{
+   font-size: 20px;
+}
+
+#topLeft:hover{
+   cursor: pointer;
+}
+
+#background:hover{
+   cursor: pointer;
+}
+
+#topLeft>h1{
+   font-size: 38px;
+   margin-bottom: 50px;
+}
+#background{
+   background-image: url(//ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?&impolicy=custom);
+   width: 70%;
+   background-size: cover;
+   height: 400px;
+   background-repeat: no-repeat;
+   
+   margin: 60px;
+}
+
+#second{
+   height: 400px;
+   width: 92%;
+   margin: auto;
+   text-align: center;
+   
+}
+
+#second>h2{
+   text-align: center;
+}
+
+#third{
+   height: 400px;
+   width: 92%;
+   margin: auto;
+   text-align: center;
+}
+
+#third>h2{
+   text-align: center;
+}
+
+#lastLeft>select{
+   width: 320px;
+   height: 60px;
+   margin-left: 50px;
+  
+   font-size: 16px;
+   border-left:0px;
+   border-right:0px;
+   outline:0px;
+   color: #2f3337;
+  font-weight: 700;
+}
+
+option{
+   font-size: 20px;
+}
+#last{
+   display: flex;
+   margin-top:100px ;
+   
+  
+}
+
+
+#lastRight{
+   width: 70%;
+   margin-left: 50px;
+   float: right;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 20px;
+  
+   
+}
+
+#sort{
+   display: flex;
+   float: right;
+   margin-right: 60px;
+}
+
+#sort>select{
+   width: 200px;
+   height: 40px;
+   margin-top: 10px;
+}
+#byType{
+   display: flex;
+   justify-content: space-around;
+}
+
+#secDivInner{
+   width: 240px;
+   cursor: pointer;
+   font-size: 20px;
+  
+}
+
+
+#secDivInner:hover{
+   cursor: pointer;
+}
+
+#secDivInner>img{
+   width: 100%;
+}
+
+#byStyle{
+   display: flex;
+   justify-content: space-around;
+
+}
+
+
+#forprice{
+   margin: 10px;
+}
+
+#bookmark{
+   color: red;
+}
+
+#bottominner:hover{
+   cursor: pointer;
+}
+
+#lastLeft>select:hover{
+   cursor: pointer;
+}
+
+#lastLeft{
+   overflow-x:hidden; 
+  overflow-y:scroll;
+  height: 600px;  
+  
+}
+
+#backgroundDecor{
+    background-image: url(https://ak1.ostkcdn.com/img/mxc/04292019_WrappedCanvas_A1.jpg?imwidth=1000&impolicy=custom);
+    width: 80%;
+    height: 350px;
+    background-repeat: no-repeat;
+   margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+#decorDivInner{
+  
+   width: 240px;
+   cursor: pointer;
+   font-size: 20px;
+   
+}
+
+#decorDivInner>img{
+   width: 100%;
+}
+
+
+#bypopular{
+   display: flex;
+   justify-content: space-around;
+}
+
+#footer{
+   margin-top: 30px;
+}

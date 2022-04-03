@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/product_page.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="icon" type="image/x-icon" href="https://media.glassdoor.com/sqll/14907/overstock-com-squarelogo-1529535998697.png">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <title>Overstock.com: Online Shopping - Bedding, Furniture, Electronics, Jewelry, Clothing &amp; more</title>
+ 
+</head>
+<body>
+    <div id="nav"></div>
+    <div id="product_page">
+
+    </div>
+    <div id="anchorlinks"></div>
+
+    <div id="infodetails"></div>
+
+    <div id="customerreviews"></div>
+
+    <div id="custreviews"></div>
+
+    <div id="footer"></div>
+</body>
+</html>
+<script type="module" src="/scripts/product_page.js"></script>
+
+<script type="module">
+
+import footer from "/components/footer.js"
+
+document.getElementById("footer").innerHTML=footer();
+
+
+
+import {navbarzone} from "/components/navbar.js"
+
+document.getElementById("nav").innerHTML=navbarzone();
+
+</script>
