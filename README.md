@@ -2,14 +2,21 @@
 Hello Readers,
 
 I hope you are doing great and enjoying life. So, I would like to introduce myself first as you are here now. I am ‘Chandan Kumar’ I have been learning Web Development at Masai School. In this blog, As a part curriculum, we need to build a Group project during construct week of every unit in Masai school. Currently, we all are in Unit-3 and here we are a team of 6 Developers. We need to develop a website similar to the main Website.
+https://miro.medium.com/max/700/0*sMyJXqUqKuPBMV9z.png
 
 We took 5 days to build this website from the scratch and we have worked remotely yet effectively in doing so. I feel very happy to say that I got a team full of enthusiastic and energetic people, these are the people I worked with
 
+
 Rohit Mahajan
+https://www.linkedin.com/in/imrohitmahajan/overlay/photo/
 Sumit Beniwal
+https://www.linkedin.com/in/sumit-beniwal-987595232/overlay/photo/
 Pankaj Kumar
+https://www.linkedin.com/in/pankaj-kumar-b7924b194/overlay/photo/
 Punam Jagtap
+https://www.linkedin.com/in/punam-jagtap-090839232/overlay/photo/
 What is Overstock?
+[https://www.linkedin.com/in/rav-chandan-kumar-singh-53bb3416b/](https://media-exp1.licdn.com/dms/image/C4D03AQE5dJvJfeDxeQ/profile-displayphoto-shrink_800_800/0/1647585528791?e=1659571200&v=beta&t=TZpo2d4dc0-LafnaImdG1NuIefUgdkT9D0ejA8QETsM)
 
 Overstock.com, Inc. is an American internet retailer selling primarily furniture headquartered in Midvale, Utah, near Salt Lake City. Patrick M. Byrne founded Overstock.com in 1999. The company initially sold exclusively surplus and returned merchandise on an online e-commerce marketplace, liquidating the inventories of at least 18 failed dot-com companies at below-wholesale prices. The company continues to sell home decor, furniture, bedding, and many other goods that are closeout merchandise; however, it also sells new merchandise.
 
